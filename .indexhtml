@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecosystems Project</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- FLOATING ANIMATIONS -->
+<div class="birds">🐦 🐦 🐦</div>
+<div class="fish">🐟 🐠 🐟</div>
+<div class="waves">🌊 🌊 🌊</div>
+
+<!-- NIGHT MODE TOGGLE -->
+<button id="nightToggle">🌙 Night Mode</button>
+
+<header>
+  <h1>🌍 Ecosystems</h1>
+  <p>Exploring the balance of life on Earth</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#types">Ecosystem Types</a>
+  <a href="#foodchain">Food Chain</a>
+  <a href="#simulator">Simulators</a>
+  <a href="#game">Game</a>
+</nav>
+
+<section id="about">
+  <h2>What is an Ecosystem?</h2>
+  <p>An ecosystem is a community of living organisms interacting with their environment.</p>
+</section>
+
+<section id="types">
+  <h2>Major Ecosystem Types</h2>
+  <div class="card-container">
+    <div class="card"><h3>🌲 Forest</h3><p>Trees, insects, birds, and predators.</p></div>
+    <div class="card"><h3>🏞️ Lake</h3><p>Fish, algae, insects, and birds.</p></div>
+  </div>
+</section>
+
+<section id="foodchain">
+  <h2>Example Food Chain</h2>
+  <div class="foodchain">☀️ → 🌱 → 🐇 → 🦊</div>
+</section>
+
+<section id="simulator">
+  <h2>🌲 Forest Simulator</h2>
+  <button onclick="runForest()">Run Forest Simulation</button>
+  <canvas id="forestChart"></canvas>
+
+  <h2 style="margin-top:60px;">🌊 Lake Simulator</h2>
+  <button onclick="runLake()">Run Lake Simulation</button>
+  <canvas id="lakeChart"></canvas>
+</section>
+
+<section id="game">
+  <h2>🎮 Ecosystem Balance Game</h2>
+  <p>Click buttons to balance the ecosystem. Keep all populations above zero!</p>
+
+  <div class="game-panel">
+    <button onclick="addPlant()">➕ Plants</button>
+    <button onclick="addHerbivore()">➕ Herbivores</button>
+    <button onclick="addCarnivore()">➕ Carnivores</button>
+  </div>
+
+  <p id="gameStatus"></p>
+</section>
+
+<footer>
+  <p>Science Project • Ecosystems</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
